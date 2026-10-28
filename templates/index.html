@@ -1,0 +1,3233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EVINSIGHTS — Electric Vehicle Market Intelligence</title>
+
+    <meta
+        name="description"
+        content="EVINSIGHTS — Premium electric vehicle market intelligence covering executive performance, competitive intelligence, sustainable mobility and strategic insights."
+    >
+
+    <style>
+
+        /* =========================================================
+           EVINSIGHTS — ELEGANT EDITION
+           Luxury Automotive / Editorial Intelligence
+        ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            background: #080909;
+
+            color: #f4f1e9;
+
+            overflow-x: hidden;
+        }
+
+
+        :root {
+
+            --black: #080909;
+            --black-soft: #0d0e0e;
+            --charcoal: #141515;
+
+            --gold: #c9a96e;
+            --gold-light: #ead39c;
+            --gold-dark: #947342;
+
+            --ivory: #f5f2ea;
+            --white: #ffffff;
+
+            --text: #c7c3ba;
+            --muted: #77756f;
+
+            --border:
+                rgba(255,255,255,0.12);
+
+            --glass:
+                rgba(255,255,255,0.045);
+        }
+
+
+        /* =========================================================
+           SCROLL PROGRESS
+        ========================================================= */
+
+        .scroll-progress {
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 0%;
+            height: 2px;
+
+            z-index: 9999;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--gold-dark),
+                    var(--gold-light),
+                    #ffffff
+                );
+
+            box-shadow:
+                0 0 14px
+                rgba(201,169,110,0.55);
+        }
+
+
+        /* =========================================================
+           BACKGROUND ATMOSPHERE
+        ========================================================= */
+
+        body::before {
+
+            content: "";
+
+            position: fixed;
+
+            inset: 0;
+
+            pointer-events: none;
+
+            z-index: -5;
+
+            background:
+
+                radial-gradient(
+                    circle at 12% 12%,
+                    rgba(201,169,110,0.065),
+                    transparent 28%
+                ),
+
+                radial-gradient(
+                    circle at 88% 55%,
+                    rgba(255,255,255,0.025),
+                    transparent 30%
+                );
+        }
+
+
+        /* =========================================================
+           AMBIENT LIGHT
+        ========================================================= */
+
+        .ambient {
+
+            position: fixed;
+
+            width: 430px;
+            height: 430px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(201,169,110,0.045);
+
+            filter:
+                blur(120px);
+
+            pointer-events: none;
+
+            z-index: -3;
+
+            animation:
+                ambientMove 17s ease-in-out infinite;
+        }
+
+        .ambient.one {
+
+            top: -180px;
+            left: -150px;
+        }
+
+        .ambient.two {
+
+            right: -220px;
+            top: 50%;
+
+            animation-delay:
+                -8s;
+        }
+
+        @keyframes ambientMove {
+
+            0%,
+            100% {
+                transform:
+                    translate(0,0);
+            }
+
+            50% {
+                transform:
+                    translate(40px,-30px);
+            }
+        }
+
+
+        /* =========================================================
+           NAVIGATION
+        ========================================================= */
+
+        nav {
+
+            position: fixed;
+
+            top: 20px;
+            left: 50%;
+
+            transform:
+                translateX(-50%);
+
+            width:
+                min(1180px, calc(100% - 36px));
+
+            padding:
+                12px 15px 12px 18px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            z-index: 1000;
+
+            background:
+                rgba(10,11,11,0.68);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.11);
+
+            border-radius:
+                16px;
+
+            backdrop-filter:
+                blur(24px);
+
+            -webkit-backdrop-filter:
+                blur(24px);
+
+            box-shadow:
+                0 20px 65px
+                rgba(0,0,0,0.42);
+
+            animation:
+                navIn 0.9s ease forwards;
+        }
+
+        @keyframes navIn {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translate(-50%,-20px);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translate(-50%,0);
+            }
+        }
+
+        .logo {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                10px;
+        }
+
+        .logo-mark {
+
+            width:
+                34px;
+
+            height:
+                34px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                10px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #ead39c,
+                    #a77e43
+                );
+
+            color:
+                #15120d;
+
+            font-size:
+                15px;
+
+            box-shadow:
+                0 0 24px
+                rgba(201,169,110,0.16);
+        }
+
+        .logo-name {
+
+            font-size:
+                15px;
+
+            font-weight:
+                850;
+
+            letter-spacing:
+                0.5px;
+
+            color:
+                var(--ivory);
+        }
+
+        .logo-sub {
+
+            display:
+                block;
+
+            color:
+                #766f62;
+
+            font-size:
+                7px;
+
+            letter-spacing:
+                1.8px;
+
+            margin-top:
+                2px;
+        }
+
+        .nav-links {
+
+            list-style:
+                none;
+
+            display:
+                flex;
+
+            gap:
+                30px;
+        }
+
+        .nav-links a {
+
+            position:
+                relative;
+
+            color:
+                #929087;
+
+            text-decoration:
+                none;
+
+            font-size:
+                10px;
+
+            font-weight:
+                750;
+
+            letter-spacing:
+                0.8px;
+
+            transition:
+                0.3s ease;
+        }
+
+        .nav-links a:hover {
+
+            color:
+                var(--gold-light);
+        }
+
+        .nav-links a::after {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            left:
+                50%;
+
+            bottom:
+                -7px;
+
+            width:
+                0;
+
+            height:
+                1px;
+
+            transform:
+                translateX(-50%);
+
+            background:
+                var(--gold);
+
+            transition:
+                0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+
+            width:
+                100%;
+        }
+
+        .nav-status {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                7px;
+
+            padding:
+                7px 10px;
+
+            border:
+                1px solid
+                rgba(201,169,110,0.18);
+
+            border-radius:
+                100px;
+
+            color:
+                #87847d;
+
+            font-size:
+                8px;
+
+            font-weight:
+                750;
+
+            letter-spacing:
+                1px;
+        }
+
+        .status-dot {
+
+            width:
+                5px;
+
+            height:
+                5px;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--gold-light);
+
+            box-shadow:
+                0 0 9px
+                rgba(234,211,156,0.8);
+
+            animation:
+                statusPulse 2.4s infinite;
+        }
+
+        @keyframes statusPulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.35;
+            }
+        }
+
+
+        /* =========================================================
+           ELEGANT HERO
+        ========================================================= */
+
+        .hero {
+
+            min-height:
+                100vh;
+
+            position:
+                relative;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            padding:
+                155px 8%
+                120px;
+
+            overflow:
+                hidden;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    rgba(5,6,6,0.97) 0%,
+                    rgba(5,6,6,0.91) 35%,
+                    rgba(5,6,6,0.57) 70%,
+                    rgba(5,6,6,0.78) 100%
+                ),
+
+                url("https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=2200&q=90");
+
+            background-size:
+                cover;
+
+            background-position:
+                center;
+        }
+
+        .hero::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            inset:
+                0;
+
+            background:
+
+                linear-gradient(
+                    180deg,
+                    rgba(0,0,0,0.28),
+                    transparent 30%,
+                    rgba(7,8,8,0.90) 100%
+                );
+
+            pointer-events:
+                none;
+        }
+
+        .hero::after {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            left:
+                8%;
+
+            right:
+                8%;
+
+            bottom:
+                0;
+
+            height:
+                1px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(201,169,110,0.42),
+                    transparent
+                );
+
+            opacity:
+                0.6;
+        }
+
+
+        /* =========================================================
+           HERO CONTENT
+        ========================================================= */
+
+        .hero-content {
+
+            position:
+                relative;
+
+            z-index:
+                3;
+
+            max-width:
+                900px;
+
+            animation:
+                elegantReveal 1.15s
+                cubic-bezier(.2,.8,.2,1)
+                forwards;
+        }
+
+        @keyframes elegantReveal {
+
+            from {
+
+                opacity:
+                    0;
+
+                transform:
+                    translateY(35px);
+            }
+
+            to {
+
+                opacity:
+                    1;
+
+                transform:
+                    translateY(0);
+            }
+        }
+
+        .hero-eyebrow {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                13px;
+
+            margin-bottom:
+                29px;
+
+            color:
+                var(--gold-light);
+
+            font-size:
+                9px;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                2.8px;
+
+            text-transform:
+                uppercase;
+        }
+
+        .hero-eyebrow::before {
+
+            content:
+                "";
+
+            width:
+                42px;
+
+            height:
+                1px;
+
+            background:
+                var(--gold);
+        }
+
+        .hero-title {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(54px, 7.5vw, 100px);
+
+            line-height:
+                0.94;
+
+            letter-spacing:
+                -4.5px;
+
+            font-weight:
+                400;
+
+            margin-bottom:
+                30px;
+        }
+
+        .hero-title .gold {
+
+            color:
+                var(--gold-light);
+        }
+
+        .hero-title .italic {
+
+            font-style:
+                italic;
+
+            color:
+                #f5f2ea;
+        }
+
+        .hero-rule {
+
+            width:
+                74px;
+
+            height:
+                1px;
+
+            background:
+                var(--gold);
+
+            margin-bottom:
+                26px;
+        }
+
+        .hero-description {
+
+            max-width:
+                640px;
+
+            color:
+                #b5b1a8;
+
+            font-size:
+                15px;
+
+            line-height:
+                1.95;
+
+            margin-bottom:
+                37px;
+        }
+
+
+        /* =========================================================
+           HERO BUTTONS
+        ========================================================= */
+
+        .hero-buttons {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                14px;
+
+            flex-wrap:
+                wrap;
+        }
+
+        .btn {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            gap:
+                9px;
+
+            padding:
+                13px 20px;
+
+            border-radius:
+                9px;
+
+            text-decoration:
+                none;
+
+            font-size:
+                11px;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                0.5px;
+
+            transition:
+                all 0.35s ease;
+        }
+
+        .btn-primary {
+
+            color:
+                #16130e;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ead39c,
+                    #af874b
+                );
+
+            box-shadow:
+                0 14px 40px
+                rgba(201,169,110,0.17);
+        }
+
+        .btn-primary:hover {
+
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 20px 50px
+                rgba(201,169,110,0.28);
+        }
+
+        .btn-secondary {
+
+            color:
+                var(--ivory);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.16);
+
+            background:
+                rgba(255,255,255,0.035);
+
+            backdrop-filter:
+                blur(12px);
+        }
+
+        .btn-secondary:hover {
+
+            transform:
+                translateY(-3px);
+
+            border-color:
+                rgba(201,169,110,0.42);
+
+            background:
+                rgba(201,169,110,0.065);
+        }
+
+
+        /* =========================================================
+           HERO METRICS
+        ========================================================= */
+
+        .hero-metrics {
+
+            display:
+                flex;
+
+            margin-top:
+                66px;
+        }
+
+        .metric {
+
+            padding:
+                0 29px;
+
+            border-right:
+                1px solid
+                rgba(255,255,255,0.10);
+        }
+
+        .metric:first-child {
+
+            padding-left:
+                0;
+        }
+
+        .metric:last-child {
+
+            border:
+                none;
+        }
+
+        .metric-number {
+
+            color:
+                var(--gold-light);
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-size:
+                25px;
+
+            line-height:
+                1;
+        }
+
+        .metric-label {
+
+            color:
+                #706e68;
+
+            font-size:
+                8px;
+
+            font-weight:
+                750;
+
+            letter-spacing:
+                1.5px;
+
+            text-transform:
+                uppercase;
+
+            margin-top:
+                8px;
+        }
+
+
+        /* =========================================================
+           SCROLL CUE
+        ========================================================= */
+
+        .scroll-cue {
+
+            position:
+                absolute;
+
+            bottom:
+                30px;
+
+            right:
+                8%;
+
+            z-index:
+                3;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                12px;
+
+            color:
+                #77746d;
+
+            font-size:
+                8px;
+
+            font-weight:
+                750;
+
+            letter-spacing:
+                2px;
+
+            text-transform:
+                uppercase;
+        }
+
+        .scroll-line {
+
+            width:
+                42px;
+
+            height:
+                1px;
+
+            background:
+                var(--gold);
+
+            opacity:
+                0.7;
+
+            animation:
+                scrollLine 2s ease-in-out infinite;
+        }
+
+        @keyframes scrollLine {
+
+            0%,
+            100% {
+                width:
+                    25px;
+            }
+
+            50% {
+                width:
+                    45px;
+            }
+        }
+
+
+        /* =========================================================
+           GLOBAL SECTIONS
+        ========================================================= */
+
+        section {
+
+            padding:
+                120px 6%;
+        }
+
+        .section-header {
+
+            max-width:
+                1450px;
+
+            margin:
+                0 auto 62px;
+        }
+
+        .section-top {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                13px;
+
+            margin-bottom:
+                17px;
+
+            color:
+                var(--gold);
+
+            font-size:
+                9px;
+
+            font-weight:
+                850;
+
+            letter-spacing:
+                2.5px;
+
+            text-transform:
+                uppercase;
+        }
+
+        .section-top::before {
+
+            content:
+                "";
+
+            width:
+                31px;
+
+            height:
+                1px;
+
+            background:
+                var(--gold);
+        }
+
+        .section-number {
+
+            margin-left:
+                auto;
+
+            color:
+                rgba(201,169,110,0.32);
+
+            font-size:
+                9px;
+
+            letter-spacing:
+                1.8px;
+        }
+
+        .section-title {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(35px, 4.5vw, 57px);
+
+            line-height:
+                1.04;
+
+            letter-spacing:
+                -2.7px;
+
+            font-weight:
+                400;
+
+            margin-bottom:
+                20px;
+        }
+
+        .section-description {
+
+            max-width:
+                690px;
+
+            color:
+                var(--muted);
+
+            font-size:
+                13px;
+
+            line-height:
+                1.9;
+        }
+
+
+        /* =========================================================
+           DASHBOARDS
+        ========================================================= */
+
+        .dashboard-list {
+
+            max-width:
+                1500px;
+
+            margin:
+                auto;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            gap:
+                78px;
+        }
+
+        .dashboard-card {
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.115);
+
+            border-radius:
+                25px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.065),
+                    rgba(255,255,255,0.022)
+                );
+
+            backdrop-filter:
+                blur(24px);
+
+            -webkit-backdrop-filter:
+                blur(24px);
+
+            box-shadow:
+                0 35px 95px
+                rgba(0,0,0,0.40);
+
+            transition:
+                0.45s ease;
+        }
+
+        .dashboard-card:hover {
+
+            transform:
+                translateY(-7px);
+
+            border-color:
+                rgba(201,169,110,0.30);
+
+            box-shadow:
+                0 45px 110px
+                rgba(0,0,0,0.52);
+        }
+
+        .dashboard-card::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            top:
+                0;
+
+            left:
+                -100%;
+
+            width:
+                75%;
+
+            height:
+                1px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    var(--gold-light),
+                    transparent
+                );
+
+            transition:
+                left 1s ease;
+
+            z-index:
+                5;
+        }
+
+        .dashboard-card:hover::before {
+
+            left:
+                125%;
+        }
+
+        .dashboard-head {
+
+            min-height:
+                142px;
+
+            padding:
+                31px 35px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            gap:
+                20px;
+        }
+
+        .dashboard-identity {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                20px;
+        }
+
+        .dashboard-index {
+
+            width:
+                51px;
+
+            height:
+                51px;
+
+            min-width:
+                51px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                14px;
+
+            color:
+                var(--gold-light);
+
+            background:
+                rgba(201,169,110,0.08);
+
+            border:
+                1px solid
+                rgba(201,169,110,0.22);
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-size:
+                14px;
+        }
+
+        .dashboard-label {
+
+            color:
+                #827866;
+
+            font-size:
+                8px;
+
+            font-weight:
+                850;
+
+            letter-spacing:
+                2px;
+
+            margin-bottom:
+                7px;
+        }
+
+        .dashboard-title {
+
+            font-size:
+                25px;
+
+            font-weight:
+                780;
+
+            margin-bottom:
+                5px;
+        }
+
+        .dashboard-description {
+
+            color:
+                #7d7b75;
+
+            font-size:
+                11px;
+
+            line-height:
+                1.65;
+        }
+
+        .dashboard-tag {
+
+            color:
+                var(--gold-light);
+
+            padding:
+                8px 11px;
+
+            border:
+                1px solid
+                rgba(201,169,110,0.19);
+
+            border-radius:
+                100px;
+
+            background:
+                rgba(201,169,110,0.055);
+
+            font-size:
+                8px;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                1px;
+
+            white-space:
+                nowrap;
+        }
+
+        .tableau-frame {
+
+            width:
+                100%;
+
+            height:
+                680px;
+
+            background:
+                #090a0a;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,0.07);
+        }
+
+        .tableau-frame iframe {
+
+            display:
+                block;
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            border:
+                none;
+        }
+
+        .dashboard-divider {
+
+            width:
+                95px;
+
+            height:
+                1px;
+
+            margin:
+                -28px auto -50px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    var(--gold),
+                    transparent
+                );
+
+            opacity:
+                0.55;
+        }
+
+
+        /* =========================================================
+           INSIGHTS
+        ========================================================= */
+
+        .insights-section {
+
+            padding-top:
+                65px;
+        }
+
+        .insight-grid {
+
+            max-width:
+                1450px;
+
+            margin:
+                auto;
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap:
+                20px;
+        }
+
+        .insight-card {
+
+            position:
+                relative;
+
+            min-height:
+                245px;
+
+            padding:
+                32px;
+
+            overflow:
+                hidden;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.105);
+
+            border-radius:
+                20px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.06),
+                    rgba(255,255,255,0.02)
+                );
+
+            backdrop-filter:
+                blur(20px);
+
+            transition:
+                0.4s ease;
+        }
+
+        .insight-card:hover {
+
+            transform:
+                translateY(-7px);
+
+            border-color:
+                rgba(201,169,110,0.30);
+        }
+
+        .insight-number {
+
+            color:
+                rgba(201,169,110,0.40);
+
+            font-size:
+                8px;
+
+            font-weight:
+                850;
+
+            letter-spacing:
+                1.8px;
+
+            margin-bottom:
+                27px;
+        }
+
+        .insight-icon {
+
+            width:
+                43px;
+
+            height:
+                43px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            margin-bottom:
+                18px;
+
+            border-radius:
+                12px;
+
+            color:
+                var(--gold-light);
+
+            background:
+                rgba(201,169,110,0.07);
+
+            border:
+                1px solid
+                rgba(201,169,110,0.17);
+        }
+
+        .insight-card h3 {
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-size:
+                20px;
+
+            font-weight:
+                400;
+
+            margin-bottom:
+                9px;
+        }
+
+        .insight-card p {
+
+            color:
+                #77756f;
+
+            font-size:
+                12px;
+
+            line-height:
+                1.75;
+        }
+
+
+        /* =========================================================
+           STORY
+        ========================================================= */
+
+        .story-section {
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #080909,
+                    #0d0e0e
+                );
+        }
+
+        .story-container {
+
+            max-width:
+                1500px;
+
+            margin:
+                auto;
+        }
+
+        .story-card {
+
+            overflow:
+                hidden;
+
+            position:
+                relative;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.12);
+
+            border-radius:
+                27px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.065),
+                    rgba(255,255,255,0.022)
+                );
+
+            backdrop-filter:
+                blur(24px);
+
+            box-shadow:
+                0 40px 110px
+                rgba(0,0,0,0.45);
+        }
+
+        .story-card::after {
+
+            content:
+                "05";
+
+            position:
+                absolute;
+
+            top:
+                12px;
+
+            right:
+                25px;
+
+            color:
+                rgba(201,169,110,0.08);
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-size:
+                90px;
+
+            line-height:
+                1;
+
+            pointer-events:
+                none;
+        }
+
+        .story-head {
+
+            padding:
+                34px;
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,0.07);
+        }
+
+        .story-kicker {
+
+            color:
+                var(--gold);
+
+            font-size:
+                8px;
+
+            font-weight:
+                850;
+
+            letter-spacing:
+                2.2px;
+
+            margin-bottom:
+                10px;
+        }
+
+        .story-title {
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-size:
+                28px;
+
+            font-weight:
+                400;
+
+            margin-bottom:
+                8px;
+        }
+
+        .story-description {
+
+            max-width:
+                760px;
+
+            color:
+                #807e77;
+
+            font-size:
+                12px;
+
+            line-height:
+                1.8;
+        }
+
+        .story-chapters {
+
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                7px;
+
+            margin-top:
+                19px;
+        }
+
+        .chapter {
+
+            padding:
+                7px 10px;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.08);
+
+            border-radius:
+                100px;
+
+            color:
+                #77756f;
+
+            font-size:
+                8px;
+
+            font-weight:
+                750;
+
+            letter-spacing:
+                0.7px;
+        }
+
+        .chapter.active {
+
+            color:
+                var(--gold-light);
+
+            border-color:
+                rgba(201,169,110,0.22);
+
+            background:
+                rgba(201,169,110,0.05);
+        }
+
+        .story-frame {
+
+            height:
+                810px;
+
+            background:
+                #090a0a;
+        }
+
+        .story-frame iframe {
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            border:
+                none;
+        }
+
+
+        /* =========================================================
+           FINAL CINEMATIC SECTION
+        ========================================================= */
+
+        .final-section {
+
+            min-height:
+                640px;
+
+            position:
+                relative;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            text-align:
+                center;
+
+            padding:
+                120px 7%;
+
+            overflow:
+                hidden;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    rgba(5,6,6,0.93),
+                    rgba(5,6,6,0.40),
+                    rgba(5,6,6,0.91)
+                ),
+
+                url("https://images.unsplash.com/photo-1592833159155-c62df1b65634?auto=format&fit=crop&w=2200&q=90");
+
+            background-size:
+                cover;
+
+            background-position:
+                center;
+
+            background-attachment:
+                fixed;
+        }
+
+        .final-section::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            inset:
+                0;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #0d0e0e,
+                    transparent 25%,
+                    transparent 76%,
+                    #080909
+                );
+        }
+
+        .final-content {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            max-width:
+                850px;
+        }
+
+        .final-label {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            gap:
+                10px;
+
+            margin-bottom:
+                24px;
+
+            color:
+                var(--gold-light);
+
+            font-size:
+                8px;
+
+            font-weight:
+                850;
+
+            letter-spacing:
+                2.8px;
+        }
+
+        .final-label::before,
+        .final-label::after {
+
+            content:
+                "";
+
+            width:
+                24px;
+
+            height:
+                1px;
+
+            background:
+                var(--gold);
+        }
+
+        .final-title {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(43px, 6vw, 78px);
+
+            line-height:
+                0.98;
+
+            letter-spacing:
+                -3.5px;
+
+            font-weight:
+                400;
+
+            margin-bottom:
+                23px;
+        }
+
+        .final-description {
+
+            max-width:
+                620px;
+
+            margin:
+                auto;
+
+            color:
+                #c0bcb3;
+
+            font-size:
+                13px;
+
+            line-height:
+                1.9;
+        }
+
+        .final-line {
+
+            width:
+                85px;
+
+            height:
+                1px;
+
+            margin:
+                32px auto 0;
+
+            background:
+                var(--gold);
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+
+            padding:
+                55px 6% 40px;
+
+            text-align:
+                center;
+
+            background:
+                #080909;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,0.07);
+        }
+
+        .footer-brand {
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-size:
+                20px;
+
+            margin-bottom:
+                10px;
+        }
+
+        .footer-brand span {
+
+            color:
+                var(--gold);
+        }
+
+        .footer-line {
+
+            width:
+                45px;
+
+            height:
+                1px;
+
+            margin:
+                22px auto;
+
+            background:
+                var(--gold-dark);
+        }
+
+        .footer-text {
+
+            color:
+                #5f5d58;
+
+            font-size:
+                9px;
+
+            line-height:
+                1.8;
+
+            letter-spacing:
+                0.5px;
+        }
+
+
+        /* =========================================================
+           SCROLL REVEAL
+        ========================================================= */
+
+        .reveal {
+
+            opacity:
+                0;
+
+            transform:
+                translateY(38px);
+
+            transition:
+                opacity 0.9s ease,
+                transform 0.9s
+                cubic-bezier(.2,.8,.2,1);
+        }
+
+        .reveal.active {
+
+            opacity:
+                1;
+
+            transform:
+                translateY(0);
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 950px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .insight-grid {
+                grid-template-columns:
+                    1fr;
+            }
+
+            .tableau-frame {
+                height:
+                    620px;
+            }
+
+            .story-frame {
+                height:
+                    700px;
+            }
+        }
+
+
+        @media (max-width: 700px) {
+
+            nav {
+
+                top:
+                    10px;
+
+                width:
+                    calc(100% - 20px);
+
+                padding:
+                    10px 12px;
+            }
+
+            .nav-status {
+                display:
+                    none;
+            }
+
+            .hero {
+
+                min-height:
+                    850px;
+
+                padding:
+                    140px 6%
+                    100px;
+            }
+
+            .hero-title {
+
+                font-size:
+                    clamp(48px, 15vw, 75px);
+
+                letter-spacing:
+                    -3px;
+            }
+
+            .hero-description {
+                font-size:
+                    14px;
+            }
+
+            .hero-metrics {
+
+                flex-wrap:
+                    wrap;
+
+                gap:
+                    0;
+            }
+
+            .metric {
+
+                padding:
+                    0 17px;
+
+                margin-bottom:
+                    20px;
+            }
+
+            section {
+                padding:
+                    82px 5%;
+            }
+
+            .section-title {
+                letter-spacing:
+                    -1.5px;
+            }
+
+            .dashboard-list {
+                gap:
+                    50px;
+            }
+
+            .dashboard-head {
+
+                padding:
+                    24px;
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+            }
+
+            .dashboard-identity {
+                align-items:
+                    flex-start;
+            }
+
+            .dashboard-title {
+                font-size:
+                    21px;
+            }
+
+            .tableau-frame {
+                height:
+                    560px;
+            }
+
+            .story-head {
+                padding:
+                    25px;
+            }
+
+            .story-frame {
+                height:
+                    600px;
+            }
+
+            .story-card::after {
+                font-size:
+                    60px;
+            }
+
+            .final-section {
+
+                min-height:
+                    520px;
+
+                background-attachment:
+                    scroll;
+            }
+
+            .final-title {
+                letter-spacing:
+                    -2px;
+            }
+
+            .scroll-cue {
+                display:
+                    none;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         SCROLL PROGRESS
+    ========================================================= -->
+
+    <div
+        class="scroll-progress"
+        id="scrollProgress">
+    </div>
+
+
+    <!-- =========================================================
+         AMBIENT LIGHT
+    ========================================================= -->
+
+    <div class="ambient one"></div>
+
+    <div class="ambient two"></div>
+
+
+    <!-- =========================================================
+         NAVIGATION
+    ========================================================= -->
+
+    <nav>
+
+
+        <div class="logo">
+
+            <div class="logo-mark">
+                ⚡
+            </div>
+
+            <div>
+
+                <div class="logo-name">
+                    EVINSIGHTS
+                </div>
+
+                <div class="logo-sub">
+                    MARKET INTELLIGENCE
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="#dashboards">
+                    DASHBOARDS
+                </a>
+            </li>
+
+            <li>
+                <a href="#insights">
+                    INSIGHTS
+                </a>
+            </li>
+
+            <li>
+                <a href="#story">
+                    MARKET STORY
+                </a>
+            </li>
+
+        </ul>
+
+
+        <div class="nav-status">
+
+            <span class="status-dot"></span>
+
+            LIVE ANALYTICS
+
+        </div>
+
+
+    </nav>
+
+
+    <!-- =========================================================
+         HERO
+    ========================================================= -->
+
+    <header class="hero">
+
+
+        <div class="hero-content">
+
+
+            <div class="hero-eyebrow">
+
+                ELECTRIC VEHICLE MARKET INTELLIGENCE
+
+            </div>
+
+
+            <h1 class="hero-title">
+
+                Understanding
+                <br>
+
+                the <span class="gold">electric</span>
+                <br>
+
+                <span class="italic">transition.</span>
+
+            </h1>
+
+
+            <div class="hero-rule"></div>
+
+
+            <p class="hero-description">
+
+                A refined analytical view of the electric vehicle
+                market — connecting performance, competition,
+                sustainability and strategic direction through data.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+
+                <a
+                    href="#dashboards"
+                    class="btn btn-primary"
+                >
+
+                    Explore the analysis
+
+                    <span>→</span>
+
+                </a>
+
+
+                <a
+                    href="#story"
+                    class="btn btn-secondary"
+                >
+
+                    View the full story
+
+                    <span>↗</span>
+
+                </a>
+
+
+            </div>
+
+
+            <div class="hero-metrics">
+
+
+                <div class="metric">
+
+                    <div class="metric-number">
+                        03
+                    </div>
+
+                    <div class="metric-label">
+                        Dashboards
+                    </div>
+
+                </div>
+
+
+                <div class="metric">
+
+                    <div class="metric-number">
+                        05
+                    </div>
+
+                    <div class="metric-label">
+                        Story Chapters
+                    </div>
+
+                </div>
+
+
+                <div class="metric">
+
+                    <div class="metric-number">
+                        01
+                    </div>
+
+                    <div class="metric-label">
+                        Market View
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="scroll-cue">
+
+            <span>
+                Explore
+            </span>
+
+            <span class="scroll-line"></span>
+
+        </div>
+
+
+    </header>
+
+
+    <!-- =========================================================
+         DASHBOARDS
+    ========================================================= -->
+
+    <section id="dashboards">
+
+
+        <div class="section-header reveal">
+
+
+            <div class="section-top">
+
+                ANALYTICS SUITE
+
+                <span class="section-number">
+                    01 / 04
+                </span>
+
+            </div>
+
+
+            <h2 class="section-title">
+
+                Three perspectives.
+                <br>
+
+                One electric market.
+
+            </h2>
+
+
+            <p class="section-description">
+
+                Explore the EV landscape through executive performance,
+                competitive intelligence and sustainable mobility.
+
+            </p>
+
+
+        </div>
+
+
+        <div class="dashboard-list">
+
+
+            <!-- =================================================
+                 EXECUTIVE DASHBOARD
+            ================================================= -->
+
+            <div class="dashboard-card reveal">
+
+
+                <div class="dashboard-head">
+
+
+                    <div class="dashboard-identity">
+
+
+                        <div class="dashboard-index">
+                            01
+                        </div>
+
+
+                        <div>
+
+                            <div class="dashboard-label">
+                                EXECUTIVE PERFORMANCE
+                            </div>
+
+                            <div class="dashboard-title">
+                                Executive Dashboard
+                            </div>
+
+                            <p class="dashboard-description">
+
+                                Market performance,
+                                sales trends and executive-level KPIs.
+
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="dashboard-tag">
+                        PERFORMANCE
+                    </div>
+
+
+                </div>
+
+
+                <div class="tableau-frame">
+
+                    <iframe
+                        src="https://public.tableau.com/views/ElectricVehicleMarketPerformanceInsights_17931794200620/EmilyJhonson-ExecutiveDashboard?:language=en-GB&:display_count=n&:showVizHome=no"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="dashboard-divider"></div>
+
+
+            <!-- =================================================
+                 COMPETITIVE INTELLIGENCE
+            ================================================= -->
+
+            <div class="dashboard-card reveal">
+
+
+                <div class="dashboard-head">
+
+
+                    <div class="dashboard-identity">
+
+
+                        <div class="dashboard-index">
+                            02
+                        </div>
+
+
+                        <div>
+
+                            <div class="dashboard-label">
+                                COMPETITIVE INTELLIGENCE
+                            </div>
+
+                            <div class="dashboard-title">
+                                Competitive Intelligence
+                            </div>
+
+                            <p class="dashboard-description">
+
+                                Brand positioning,
+                                market competition and category dynamics.
+
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="dashboard-tag">
+                        COMPETITION
+                    </div>
+
+
+                </div>
+
+
+                <div class="tableau-frame">
+
+                    <iframe
+                        src="https://public.tableau.com/views/ElectricVehicleMarketPerformanceInsights_17931794200620/Davidchen-Competetiveanalysis?:language=en-GB&:display_count=n&:showVizHome=no"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="dashboard-divider"></div>
+
+
+            <!-- =================================================
+                 SUSTAINABLE MOBILITY
+            ================================================= -->
+
+            <div class="dashboard-card reveal">
+
+
+                <div class="dashboard-head">
+
+
+                    <div class="dashboard-identity">
+
+
+                        <div class="dashboard-index">
+                            03
+                        </div>
+
+
+                        <div>
+
+                            <div class="dashboard-label">
+                                SUSTAINABLE MOBILITY
+                            </div>
+
+                            <div class="dashboard-title">
+                                Sustainable Mobility
+                            </div>
+
+                            <p class="dashboard-description">
+
+                                Range, efficiency and
+                                sustainable mobility indicators.
+
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="dashboard-tag">
+                        MOBILITY
+                    </div>
+
+
+                </div>
+
+
+                <div class="tableau-frame">
+
+                    <iframe
+                        src="https://public.tableau.com/views/ElectricVehicleMarketPerformanceInsights_17931794200620/SustainableMobility-Sarahwilliams?:language=en-GB&:display_count=n&:showVizHome=no"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =========================================================
+         INSIGHTS
+    ========================================================= -->
+
+    <section
+        id="insights"
+        class="insights-section"
+    >
+
+
+        <div class="section-header reveal">
+
+
+            <div class="section-top">
+
+                INTELLIGENCE FRAMEWORK
+
+                <span class="section-number">
+                    02 / 04
+                </span>
+
+            </div>
+
+
+            <h2 class="section-title">
+
+                From raw data
+                <br>
+
+                to strategic clarity.
+
+            </h2>
+
+
+            <p class="section-description">
+
+                Three analytical dimensions connect performance,
+                competition and sustainability into one
+                decision-making framework.
+
+            </p>
+
+
+        </div>
+
+
+        <div class="insight-grid">
+
+
+            <div class="insight-card reveal">
+
+                <div class="insight-number">
+                    DIMENSION 01
+                </div>
+
+                <div class="insight-icon">
+                    ◫
+                </div>
+
+                <h3>
+                    Performance
+                </h3>
+
+                <p>
+
+                    Understand market performance,
+                    sales patterns and executive-level
+                    business indicators.
+
+                </p>
+
+            </div>
+
+
+            <div class="insight-card reveal">
+
+                <div class="insight-number">
+                    DIMENSION 02
+                </div>
+
+                <div class="insight-icon">
+                    ◈
+                </div>
+
+                <h3>
+                    Competition
+                </h3>
+
+                <p>
+
+                    Evaluate brands, categories and
+                    competitive positioning across
+                    the EV landscape.
+
+                </p>
+
+            </div>
+
+
+            <div class="insight-card reveal">
+
+                <div class="insight-number">
+                    DIMENSION 03
+                </div>
+
+                <div class="insight-icon">
+                    ◇
+                </div>
+
+                <h3>
+                    Sustainability
+                </h3>
+
+                <p>
+
+                    Explore range, efficiency and
+                    sustainable mobility indicators
+                    shaping the future of transport.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =========================================================
+         STORY
+    ========================================================= -->
+
+    <section
+        id="story"
+        class="story-section"
+    >
+
+
+        <div class="story-container">
+
+
+            <div class="section-header reveal">
+
+
+                <div class="section-top">
+
+                    COMPLETE MARKET STORY
+
+                    <span class="section-number">
+                        03 / 04
+                    </span>
+
+                </div>
+
+
+                <h2 class="section-title">
+
+                    Five chapters.
+                    <br>
+
+                    One market narrative.
+
+                </h2>
+
+
+                <p class="section-description">
+
+                    Follow the complete Tableau Story from
+                    executive overview through competitive intelligence,
+                    sustainable mobility, performance insights and
+                    strategic recommendations.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="story-card reveal">
+
+
+                <div class="story-head">
+
+
+                    <div class="story-kicker">
+                        ELECTRIC VEHICLE MARKET ANALYSIS
+                    </div>
+
+
+                    <h3 class="story-title">
+                        The Complete Market Story
+                    </h3>
+
+
+                    <p class="story-description">
+
+                        A structured five-part analytical journey
+                        designed to move from market understanding
+                        to strategic action.
+
+                    </p>
+
+
+                    <div class="story-chapters">
+
+                        <div class="chapter active">
+                            01 EXECUTIVE
+                        </div>
+
+                        <div class="chapter">
+                            02 COMPETITION
+                        </div>
+
+                        <div class="chapter">
+                            03 SUSTAINABILITY
+                        </div>
+
+                        <div class="chapter">
+                            04 PERFORMANCE
+                        </div>
+
+                        <div class="chapter">
+                            05 STRATEGY
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="story-frame">
+
+                    <iframe
+                        src="https://public.tableau.com/views/ElectricVehicleMarketPerformanceInsights_17931794200620/ElectricVehicleMarketAnalysis?:language=en-GB&:display_count=n&:showVizHome=no"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =========================================================
+         FINAL CINEMATIC SECTION
+    ========================================================= -->
+
+    <section class="final-section">
+
+
+        <div class="final-content reveal">
+
+
+            <div class="final-label">
+
+                THE FUTURE OF MOBILITY
+
+            </div>
+
+
+            <h2 class="final-title">
+
+                Intelligence for
+                <br>
+
+                an electric future.
+
+            </h2>
+
+
+            <p class="final-description">
+
+                Data transforms the EV market from a collection
+                of numbers into a clearer view of where mobility
+                is heading next.
+
+            </p>
+
+
+            <div class="final-line"></div>
+
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================= -->
+
+    <footer>
+
+
+        <div class="footer-brand">
+
+            EVINSIGHTS
+
+            <span>
+                BLACK LABEL
+            </span>
+
+        </div>
+
+
+        <div class="footer-line"></div>
+
+
+        <p class="footer-text">
+
+            ELECTRIC VEHICLE MARKET INTELLIGENCE PLATFORM
+
+            <br>
+
+            Built with Flask · Powered by Tableau Public
+
+        </p>
+
+
+    </footer>
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================= -->
+
+    <script>
+
+
+        /* =====================================================
+           SCROLL PROGRESS
+        ===================================================== */
+
+        const progress =
+            document.getElementById(
+                "scrollProgress"
+            );
+
+
+        window.addEventListener(
+            "scroll",
+            () => {
+
+                const scrollTop =
+                    window.scrollY;
+
+                const documentHeight =
+                    document.documentElement.scrollHeight
+                    -
+                    window.innerHeight;
+
+                const percentage =
+                    (scrollTop / documentHeight) * 100;
+
+                progress.style.width =
+                    percentage + "%";
+
+            }
+        );
+
+
+        /* =====================================================
+           REVEAL ANIMATIONS
+        ===================================================== */
+
+        const revealElements =
+            document.querySelectorAll(
+                ".reveal"
+            );
+
+
+        const revealObserver =
+            new IntersectionObserver(
+                (entries) => {
+
+                    entries.forEach(
+                        (entry) => {
+
+                            if (
+                                entry.isIntersecting
+                            ) {
+
+                                entry.target.classList.add(
+                                    "active"
+                                );
+
+                                revealObserver.unobserve(
+                                    entry.target
+                                );
+
+                            }
+
+                        }
+                    );
+
+                },
+                {
+                    threshold: 0.10
+                }
+            );
+
+
+        revealElements.forEach(
+            (element) => {
+
+                revealObserver.observe(
+                    element
+                );
+
+            }
+        );
+
+
+        /* =====================================================
+           INSIGHT STAGGER
+        ===================================================== */
+
+        const insightCards =
+            document.querySelectorAll(
+                ".insight-card"
+            );
+
+
+        insightCards.forEach(
+            (card,index) => {
+
+                card.style.transitionDelay =
+                    `${index * 0.12}s`;
+
+            }
+        );
+
+
+        /* =====================================================
+           DASHBOARD STAGGER
+        ===================================================== */
+
+        const dashboardCards =
+            document.querySelectorAll(
+                ".dashboard-card"
+            );
+
+
+        dashboardCards.forEach(
+            (card,index) => {
+
+                card.style.transitionDelay =
+                    `${index * 0.08}s`;
+
+            }
+        );
+
+
+        /* =====================================================
+           HERO PARALLAX
+        ===================================================== */
+
+        const hero =
+            document.querySelector(
+                ".hero"
+            );
+
+
+        window.addEventListener(
+            "scroll",
+            () => {
+
+                const scroll =
+                    window.scrollY;
+
+                if (
+                    scroll <
+                    window.innerHeight
+                ) {
+
+                    hero.style.backgroundPosition =
+                        `center ${50 + scroll * 0.018}%`;
+
+                }
+
+            }
+        );
+
+
+    </script>
+
+
+</body>
+
+</html>
