@@ -32,6 +32,10 @@ Run Locally
    python app.py
 5. Open the local URL shown in your terminal.
 
+Explore the interactive EV market Analysis story published on tableau public.
+[**View tableau story**]
+(https://public.tableau.com/views/ElectricVehicleMarketPerformanceInsights_17931794200620/ElectricVehicleMarketAnalysis?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+
 Author
 
 Hardik Choubey
